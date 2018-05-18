@@ -8,14 +8,23 @@ var app = express();
 
 app.use(express.static('public'));
 console.log('Exact name: ' + process.env.ORA_INSTANCE_NAME);
-//runGetRequest();
+
+//sample URL.
+var urlPart1= "http://129.157.179.180:3000/fighters/45/y";
+var urlPart3="/blue/leoracle";
+var i;
+for (i = 0; i <9; i++) { 
+  
+    runGetRequest(urlPart1.concat(i,urlPart3));
+}
+
 //runDatabaseQuery();
 
 // Does a GET request to ip.jsontest.com
-function runGetRequest() {
+function runGetRequest(url) {
     
-    //sample URL.
-    var url = "http://129.157.179.180:3000/shield/33/45/blue/leoracle";
+
+   
     request(url, function(error, response, body) {
         if(!error) {
             console.log(body);
