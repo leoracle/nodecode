@@ -10,7 +10,7 @@ app.use(express.static('public'));
 console.log('Exact name: ' + process.env.ORA_INSTANCE_NAME);
 
 //sample URL.
-var urlPart1= "http://129.157.179.180:3000/fighters/45/y";
+var urlPart1= "http://129.157.179.180:3000/fighters/45/";
 var urlPart3="/blue/leoracle";
 var i;
 for (i = 0; i <9; i++) { 
